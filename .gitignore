@@ -24,5 +24,3 @@
 /nbdist/
 /.nb-gradle/
 
-Makefile
-VERSION
