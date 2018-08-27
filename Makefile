@@ -104,7 +104,7 @@ jx-release-version:
 	@echo Using next release version $(RELEASE_VERSION)
 
 version: jx-release-version
-	#mvn versions:set -DnewVersion=$(RELEASE_VERSION)
+	mvn versions:set -DnewVersion=$(RELEASE_VERSION)
 
 changelog/fix: git-rev-list
 	@echo Creating Github changelog for release: $(RELEASE_VERSION)
