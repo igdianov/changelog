@@ -56,7 +56,7 @@ credentials:
 	git config --global credential.helper store
 	jx step git credentials
 
-checkout: credentials
+checkout: #credentials
 	# ensure we're not on a detached head
 	git checkout $(RELEASE_BRANCH) 
 
