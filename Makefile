@@ -104,7 +104,7 @@ jx-release-version:
 	@echo Using next release version $(RELEASE_VERSION)
 
 version: jx-release-version
-	mvn versions:set -DnewVersion=$(RELEASE_VERSION)
+	#mvn versions:set -DnewVersion=$(RELEASE_VERSION)
 
 changelog/fix: git-rev-list
 	@echo Creating Github changelog for release: $(RELEASE_VERSION)
@@ -126,7 +126,7 @@ commit/%:
 	$(MAKE) commit $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
 	git push
 
-tag: version
+tag: 
 	git add --all
 	git commit -m "Release $(RELEASE_VERSION)" --allow-empty # if first release then no verion update is performed
 	git tag -fa v$(RELEASE_VERSION) -m "Release version $(RELEASE_VERSION)"
