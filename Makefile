@@ -58,7 +58,7 @@ credentials:
 
 checkout: #credentials
 	# ensure we're not on a detached head
-	git checkout $(RELEASE_BRANCH) 
+	git checkout $(RELEASE_BRANCH) -f
 
 skaffold/%: version/%
 	${MAKE} skaffold
