@@ -1,5 +1,5 @@
 # changelog
-Basic example of library repo to test `jx stop changelog` issues:
+Basic example of library repo to test `jx step changelog` issues:
 
 ### Summary 
 The `jx step changelog --version vX.X.X` command generates release notes that contain only latest release commit tag and single commit before it. All other commits between previous commits are missing in release notes. See https://github.com/igdianov/changelog/releases/tag/v1.0.5 for example. 
